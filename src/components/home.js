@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -7,13 +8,22 @@ const Home = () => {
       <div className="square two"></div>
       <div className="square three"></div>
       <div className="square four">
-        <p>About Me</p>
+        <Link to="/About" className="about links">
+          {" "}
+          About{" "}
+        </Link>{" "}
       </div>
       <div className="square five">
-        <p>Projects</p>
+        <Link to="/projects" className="projects links">
+          {" "}
+          Projects{" "}
+        </Link>
       </div>
       <div className="square six">
-        <p>Contact</p>
+        <Link to="/contact" className="contact links">
+          {" "}
+          Contact{" "}
+        </Link>
       </div>
       <div className="square seven">
         <img
@@ -47,11 +57,14 @@ const Home = () => {
       <div className="square central">
         <div className="central-div">
           <h1 className="header name">Agneta Pupienyte</h1>
-          <h2 className="header">Full-stack developer</h2>
-          <h3>{"{ JavaScript, React.js, Ruby, Ruby on Rails..}"}</h3>
+          <h2>Full-stack developer</h2>
+          <h3 className="languages">
+            {"{ JavaScript, React.js, Ruby, Ruby on Rails..}"}
+          </h3>
           <h3>
-            Specialising in Ruby on Rails, leverage cutting-edge technologies,
-            to bring to bring web projects to life
+            With a foundation in marketing and a passion for backend
+            development, I merge creative innovation with technical precision to
+            craft dynamic web solutions.
           </h3>
           <div className="socials">
             <img
@@ -78,14 +91,7 @@ const Home = () => {
       <div className="square right-square-seven"></div>
       <div className="square right-square-eight"></div>
 
-      <div className="square bottom-row-one">
-        <img
-          width="50"
-          height="50"
-          src="https://img.icons8.com/ios/50/down--v1.png"
-          alt="down--v1"
-        />
-      </div>
+      <div className="square bottom-row-one"></div>
       <div className="square bottom-row-two"></div>
       <div className="square bottom-row-three"></div>
       <div className="square bottom-row-four"></div>
