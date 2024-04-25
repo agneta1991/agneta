@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Nav from "./navBar";
 
 const Projects = () => {
   return (
@@ -13,6 +14,7 @@ const Projects = () => {
           alt="down--v1"
         />
       </Link>
+      <Nav />
     </div>
   );
 };

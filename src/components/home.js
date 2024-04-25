@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Nav from "./navBar";
 
 const Home = () => {
   return (
@@ -7,24 +7,7 @@ const Home = () => {
       <div className="square one"></div>
       <div className="square two"></div>
       <div className="square three"></div>
-      <div className="square four">
-        <Link to="/About" className="about links">
-          {" "}
-          About{" "}
-        </Link>{" "}
-      </div>
-      <div className="square five">
-        <Link to="/projects" className="projects links">
-          {" "}
-          Projects{" "}
-        </Link>
-      </div>
-      <div className="square six">
-        <Link to="/contact" className="contact links">
-          {" "}
-          Contact{" "}
-        </Link>
-      </div>
+      <Nav />
       <div className="square seven">
         <img
           className="icon"

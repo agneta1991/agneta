@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Nav from "./navBar";
 const Contact = () => {
   return (
     <div>
@@ -13,6 +13,7 @@ const Contact = () => {
           alt="down--v1"
         />
       </Link>
+      <Nav />
     </div>
   );
 };
