@@ -1,23 +1,31 @@
+body {
+  background-color: #fff;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff4f 40px), repeating-linear-gradient(#e4e4e431, #e3e3e347);
+  color: #000;
+  height: 100vh;
+}
+
 body.dark-mode {
-  background-color: #000000;
-opacity: 1;
-background-image: radial-gradient(#656565 0.5px, #000000 0.5px);
-background-size: 10px 10px;
-  color: #ffffff;
+  background-color: #000;
+  background-image: radial-gradient(#8b8c9a92 0.5px, #000 0.5px);
+  background-size: 35px 35px;
+  color: #fff;
 }
 
 body.dark-mode a {
-  background-color: #b41111;
+  background-color: #000;
   opacity: 1;
-  background-image: radial-gradient(#656565 0.5px, #000000 0.5px);
+  background-image: radial-gradient(#656565 0.5px, #000 0.5px);
   background-size: 10px 10px;
-    color: #ffffff;
+  color: #fff;
 }
 
 .socials > img {
   background-color: white;
   padding: 0.6rem;
   border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .navigation {
@@ -27,6 +35,7 @@ body.dark-mode a {
   height: 4rem;
   width: 99.8vw;
   border: 1px solid grey;
+  box-shadow: 1px 1px 5px 1px grey;
 }
 
 .nav-item {
@@ -81,9 +90,12 @@ body.dark-mode a {
 }
 
 .socials-div {
-  position:absolute;
-  height: calc(100vh - 4.5rem); 
+  position: absolute;
+  height: calc(100vh - 4.04rem);
+  box-shadow: 1px 1px 5px 0 grey;
+  border-bottom: 0;
 }
+
 
 .socials {
   display: flex;
@@ -95,11 +107,9 @@ body.dark-mode a {
   height: 100%;
   margin-left: 7rem;
   gap: 3rem;
-}
-
-.socials > img {
-  width: 1.5rem;
-  height: 1.5rem;
+  border-bottom: 0;
+  border-left: 0;
+  padding-right: 0.5rem;
 }
 
 .container {
@@ -115,7 +125,7 @@ body.dark-mode a {
   width: 50%;
 }
 
-.changing-div >h2,
+.changing-div > h2,
 .header {
   font-weight: 100;
   font-size: 2rem;
@@ -135,17 +145,17 @@ body.dark-mode a {
 }
 
 .languages {
-  width: auto; 
-  height: 50px; 
-  overflow: hidden; 
+  width: auto;
+  height: 50px;
+  overflow: hidden;
   margin-top: 2rem;
 }
 
 .languages > p {
   margin: 0.5rem;
   margin-top: 0;
-  padding: 0.7rem; 
-  animation: slideUp 5s infinite; 
+  padding: 0.7rem;
+  animation: slideUp 5s infinite;
   font-size: 1.2rem;
   color: white;
   font-weight: 900;
@@ -158,7 +168,6 @@ body.dark-mode a {
 
 .react {
   background-color: lightseagreen;
-
 }
 
 .rails {
@@ -169,20 +178,22 @@ body.dark-mode a {
   font-size: 1.3rem;
   font-weight: 400;
 }
+
 @keyframes slideUp {
-  0% { transform: translateY(0); } /* Initial position */
-  33.33% { transform: translateY(0%); } /* Slide first paragraph up */
-  66.66% { transform: translateY(-110%); } /* Slide second paragraph up */
-  100% { transform: translateY(-240%); } /* Slide third paragraph up */
+  50% { transform: translateY(-65%); } /* Slide second paragraph up */
+  75% { transform: translateY(-180%); } /* Slide second paragraph up */
+  100% { transform: translateY(-300%); } /* Slide third paragraph up */
 }
+
 
 .home-about {
   margin-top: 3rem;
   width: 90%;
 }
-.home-about>* {
-font-size: 1.3rem;
-margin: 0;
+
+.home-about > * {
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 .about-text {

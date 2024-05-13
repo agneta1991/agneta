@@ -12,6 +12,7 @@ const Home = () => {
           <div className="changing-div">
             <h2> A Full-stack developer</h2>
             <div className="languages">
+              <p></p>
               <p className="javascript">JavaScript</p>
               <p className="react">React.js</p>
               <p className="rails">Ruby on Rails</p>
