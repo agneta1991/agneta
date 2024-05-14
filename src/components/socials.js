@@ -1,4 +1,5 @@
 import React from "react";
+import Popup from "./popupMenu";
 
 const Socials = () => {
   return (
@@ -34,18 +35,7 @@ const Socials = () => {
             alt="medium-logo"
           />
         </a>
-        <img
-          width="50"
-          height="50"
-          src="https://img.icons8.com/ios-filled/50/phone.png"
-          alt="phone"
-        />
-        <img
-          width="24"
-          height="24"
-          src="https://img.icons8.com/material-sharp/24/mail.png"
-          alt="mail"
-        />
+        <Popup />
       </div>
     </div>
   );
