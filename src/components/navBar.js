@@ -41,9 +41,7 @@ const Nav = () => {
         </Link>
         <Link
           to="/projects"
-          className={`projects links ${
-            activeLink === "/projects" ? "active" : ""
-          }`}
+          className={`links ${activeLink === "/projects" ? "active" : ""}`}
           onClick={() => handleLinkClick("/projects")}
         >
           03. Projects

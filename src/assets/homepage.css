@@ -298,6 +298,11 @@ body.dark-mode .active {
   border-radius: 0.5rem;
 }
 
+.projects > ul > li {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
 .listings > li:hover {
   background-color: #80808037;
 }
@@ -320,4 +325,24 @@ body.dark-mode .active {
 
 .about-me > h2 {
   font-style: italic;
+}
+
+.projects-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projects {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.projects > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
 }

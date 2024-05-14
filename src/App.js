@@ -8,6 +8,7 @@ import Projects from "./components/projects";
 import Nav from "./components/navBar";
 import Socials from "./components/socials";
 
+
 const App = () => {
   return (
     <div className="App">
