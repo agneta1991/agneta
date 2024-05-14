@@ -20,14 +20,6 @@ body.dark-mode a {
   color: #fff;
 }
 
-.socials > img {
-  background-color: white;
-  padding: 0.6rem;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .navigation {
   display: flex;
   justify-content: space-around;
@@ -96,7 +88,6 @@ body.dark-mode a {
   border-bottom: 0;
 }
 
-
 .socials {
   display: flex;
   flex-direction: column;
@@ -110,6 +101,15 @@ body.dark-mode a {
   border-bottom: 0;
   border-left: 0;
   padding-right: 0.5rem;
+}
+
+.socials > img,
+.socials > a > img {
+  background-color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .container {
@@ -184,7 +184,6 @@ body.dark-mode a {
   75% { transform: translateY(-180%); } /* Slide second paragraph up */
   100% { transform: translateY(-300%); } /* Slide third paragraph up */
 }
-
 
 .home-about {
   margin-top: 3rem;
