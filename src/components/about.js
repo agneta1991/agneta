@@ -1,41 +1,70 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Contact = () => {
+const About = () => {
   return (
     <>
-      <header>
-        <Link to="/" className="back-to-home-link">
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/ios/50/left--v1.png"
-            alt="down--v1"
-          />
-        </Link>
-      </header>
-      <section className="headline">
-        <div className="container-two">
-          <h1 className="header name">
-            Hello World!{" "}
-            <img
-              src="https://img.icons8.com/emoji/48/waving-hand-emoji.png"
-              alt="waving-hand-emoji"
-            />{" "}
-            <br />
-            I'm Agneta
-          </h1>
-          <h3 className="about">
-            Excited about Ruby on Rails, I'm a dynamic full-stack developer
-            ready to bring your ideas to life! Let's collaborate on something
-            incredible. Whether you have a project in mind or just want to chat
-            possibilities, I'm here for it. Let's connect and start building
-            amazing things together!
-          </h3>
+      <section className="container">
+        <div className="about-me">
+          <h1>About me</h1>
+          <h2>Software Developer</h2>
+          <p className="about-p">
+            With a track record of 20+ projects, showcasing expertise in
+            React.js, Vanilla JavaScript, and Ruby on Rails, highlighting
+            proficiency in both front-end and back-end development. Particularly
+            drawn to back-end work due to its natural alignment with my
+            strengths. Leveraging exceptional collaboration and communication
+            skills developed through marketing experience.
+          </p>
+        </div>
+        <div className="skills-div">
+          <h2>SKILLS</h2>
+          <div className="skills-list">
+            <h3>Front-end:</h3>
+            <ul className="listings">
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Redux</li>
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div className="skills-list">
+            <h3>Back-end:</h3>
+            <ul className="listings">
+              <li>Ruby</li>
+              <li>Ruby on Rails</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          <div className="skills-list">
+            <h3>Tools & Methods:</h3>
+            <ul className="listings">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Mobile / Responsive Development</li>
+              <li>Jest</li>
+              <li>Rspec</li>
+              <li>TDD</li>
+              <li>JWT</li>
+              <li>Netlify</li>
+            </ul>
+          </div>
+          <div className="skills-list">
+            <h3>Professional:</h3>
+            <ul className="listings">
+              <li>Mentoring</li>
+              <li>Teamwork</li>
+              <li>Project management</li>
+              <li>Communication & Presentation</li>
+              <li>Creative Problem-Solving</li>
+            </ul>
+          </div>
         </div>
       </section>
     </>
   );
 };
 
-export default Contact;
+export default About;

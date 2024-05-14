@@ -1,9 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import profileImage from "../assets/images/profile.PNG";
 import DropdownMenu from "./buttonMode";
 
 const Nav = () => {
+  const [activeLink, setActiveLink] = useState("");
+  const location = useLocation();
+
+  useState(() => {
+    const path = location.pathname;
+    setActiveLink(path);
+  }, [location]);
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
+
   return (
     <div className="navigation">
       <div className="nav-item">
@@ -13,16 +25,36 @@ const Nav = () => {
       </div>
 
       <div className="nav-item">
-        <Link to="/" className="home links">
+        <Link
+          to="/"
+          className={`home links ${activeLink === "/" ? "active" : ""}`}
+          onClick={() => handleLinkClick("/")}
+        >
           01. Home
         </Link>
-        <Link to="/about" className="about links">
+        <Link
+          to="/about"
+          className={`about links ${activeLink === "/about" ? "active" : ""}`}
+          onClick={() => handleLinkClick("/about")}
+        >
           02. About
         </Link>
-        <Link to="/projects" className="projects links">
+        <Link
+          to="/projects"
+          className={`projects links ${
+            activeLink === "/projects" ? "active" : ""
+          }`}
+          onClick={() => handleLinkClick("/projects")}
+        >
           03. Projects
         </Link>
-        <Link to="/contact" className="contact links">
+        <Link
+          to="/contact"
+          className={`contact links ${
+            activeLink === "/contact" ? "active" : ""
+          }`}
+          onClick={() => handleLinkClick("/contact")}
+        >
           04. Contact
         </Link>
       </div>

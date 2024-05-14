@@ -4,6 +4,10 @@ body {
   color: #000;
 }
 
+body .active {
+  font-weight: 600;
+}
+
 body.dark-mode {
   background-color: #000;
   background-image: radial-gradient(#8b8c9a92 0.5px, #000 0.5px);
@@ -16,7 +20,11 @@ body.dark-mode a {
   opacity: 1;
   background-image: radial-gradient(#656565 0.5px, #000 0.5px);
   background-size: 10px 10px;
-  color: #fff;
+  color: #a9a6a6;
+}
+
+body.dark-mode .active {
+  color: white;
 }
 
 .navigation {
@@ -139,8 +147,8 @@ body.dark-mode a {
   color: white;
   text-shadow: 1px 1px 1px black;
   border: 1px solid gray;
-  border-radius: 8rem 8rem 8rem 0;
-  font-size: 1.5rem;
+  border-radius: 8rem;
+  font-size: 1rem;
   font-weight: 900;
   padding: 0.8rem 0.5rem;
   margin: 3rem 0 0 1rem;
@@ -171,7 +179,7 @@ body.dark-mode a {
   align-items: center;
 }
 
-.container > div {
+.container-div {
   width: 50%;
 }
 
@@ -230,9 +238,9 @@ body.dark-mode a {
 }
 
 @keyframes slideUp {
-  50% { transform: translateY(-65%); } /* Slide second paragraph up */
-  75% { transform: translateY(-180%); } /* Slide second paragraph up */
-  100% { transform: translateY(-300%); } /* Slide third paragraph up */
+  50% { transform: translateY(-65%); }
+  75% { transform: translateY(-180%); }
+  100% { transform: translateY(-300%); }
 }
 
 .home-about {
@@ -250,4 +258,66 @@ body.dark-mode a {
   padding: 1rem;
   font-style: italic;
   font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.about-p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.skills-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.skills-list > h3,
+.skills-list > ul {
+  margin: 0;
+}
+
+.skills-list > h3 {
+  color: rgb(86, 86, 231);
+  text-align: center;
+  padding-right: 0.5rem;
+}
+
+.listings {
+  display: flex;
+  padding: 0.2rem;
+}
+
+.listings > li {
+  list-style: none;
+  padding: 0.4rem 0.9rem;
+  margin: 0.3rem;
+  border: 1px solid gray;
+  background-color: #8080800f;
+  border-radius: 0.5rem;
+}
+
+.listings > li:hover {
+  background-color: #80808037;
+}
+
+.about-me,
+.skills-div {
+  width: 73%;
+  padding-left: 2rem;
+}
+
+.skills-div > h2 {
+  margin-bottom: 0.2rem;
+}
+
+.about-me > h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.about-me > h2 {
+  font-style: italic;
 }
