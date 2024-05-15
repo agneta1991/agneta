@@ -551,3 +551,27 @@ input[type="submit"]:focus {
     font-size: 0.8rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .image {
+    display: none;
+  }
+
+  .socials-div,
+  .socials {
+    padding: 0;
+    margin: 0;
+  }
+
+  .projects > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form > .about-me {
+    padding-left: 4rem;
+  }
+
+  .contact-form > .about-me > .about-p {
+    width: 92%;
+  }
+}
