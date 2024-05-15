@@ -404,6 +404,76 @@ body.dark-mode .see-source {
   color: #5656e7;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form > div {
+  width: 70vh;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px solid gray;
+  padding: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.122);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: calc(33.33% - 10px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
 @media only screen and (max-width: 1024px) {
   .socials {
     margin: 1rem;
@@ -418,6 +488,10 @@ body.dark-mode .see-source {
     box-shadow: 1px 1px 5px gray;
     margin: 1rem;
     margin-left: 0;
+  }
+
+  .container > :first-child {
+    padding-top: 10rem;
   }
 
   .listings {

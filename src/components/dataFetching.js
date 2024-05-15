@@ -9,7 +9,7 @@ import {
 } from "./titles";
 
 const DataFetchingComponent = () => {
-  const githubname = "agneta1991";
+    const githubname = "agneta1991";
   const accessToken = "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";
   const targetRepositories = [
     "book-an-appointment-capstone",
