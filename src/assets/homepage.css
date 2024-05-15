@@ -28,6 +28,7 @@ body.dark-mode .active {
 }
 
 .navigation {
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,6 +36,12 @@ body.dark-mode .active {
   width: 99.8vw;
   border: 1px solid grey;
   box-shadow: 1px 1px 5px 1px grey;
+  z-index: 100;
+  background-color: white;
+}
+
+body.dark-mode .navigation {
+  background-color: black;
 }
 
 .nav-item {
@@ -91,11 +98,11 @@ body.dark-mode .active {
 }
 
 .socials-div {
-  position: absolute;
-  box-shadow: 1px 1px 5px 0 grey;
-  box-sizing: border-box;
+  position: fixed;
   border-bottom: 0;
-  height: calc(100% - 4.8rem);
+  height: 99.5%;
+  box-shadow: 5px 5px 5px -5px gray;
+  margin-bottom: -5rem;
 }
 
 .socials {
@@ -104,13 +111,18 @@ body.dark-mode .active {
   justify-content: center;
   align-items: center;
   width: 4rem;
-  height: 80%;
+  height: 90%;
   margin-left: 7rem;
   gap: 3rem;
   border-bottom: 0;
   border-left: 0;
   padding-right: 0.5rem;
-  box-sizing: border-box;
+  margin-bottom: -5rem;
+}
+
+.see-source > img {
+  height: 1.5rem;
+  width: auto;
 }
 
 .socials > img,
@@ -172,11 +184,14 @@ body.dark-mode .active {
 
 .container {
   width: 100vw;
-  height: 85vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.container > :first-child {
+  padding-top: 15rem;
 }
 
 .container-div {
@@ -299,6 +314,10 @@ body.dark-mode .active {
 }
 
 .projects > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #ccc;
   padding: 20px;
 }
@@ -336,8 +355,10 @@ body.dark-mode .active {
 }
 
 .projects {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  padding-left: 10rem;
+  margin-top: 6rem;
 }
 
 .projects > ul {
@@ -345,4 +366,96 @@ body.dark-mode .active {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   list-style: none;
+}
+
+.projects > ul > li > img {
+  width: 25rem;
+  height: auto;
+}
+
+.description {
+  color: rgba(0, 0, 0, 0.746);
+  width: 80%;
+}
+
+body.dark-mode .description {
+  color: rgba(255, 255, 255, 0.656);
+}
+
+.projects-title-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.see-source {
+  text-decoration: none;
+  color: #5656e7;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body.dark-mode .see-source {
+  color: #5656e7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .socials {
+    margin: 1rem;
+  }
+
+  .container-div {
+    width: 70%;
+  }
+
+  .skills-list {
+    padding: 1rem;
+    box-shadow: 1px 1px 5px gray;
+    margin: 1rem;
+    margin-left: 0;
+  }
+
+  .listings {
+    flex-wrap: wrap;
+  }
+
+  .listings > li {
+    text-align: center;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  .projects {
+    padding-left: 0;
+  }
+
+  .projects > ul {
+    place-items: center;
+    width: 100%;
+  }
+
+  .projects > ul > li {
+    width: 80%;
+  }
+
+  .projects > ul > li > img {
+    width: 95%;
+  }
+
+  .projects-title-div > * {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    width: 91%;
+  }
+
+  .list {
+    font-size: 0.8rem;
+  }
 }
