@@ -184,14 +184,11 @@ body.dark-mode .navigation {
 
 .container {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.container > :first-child {
-  padding-top: 15rem;
+  justify-content: center;
 }
 
 .container-div {
@@ -319,7 +316,10 @@ body.dark-mode .navigation {
   justify-content: center;
   align-items: center;
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .listings > li:hover {
@@ -364,8 +364,8 @@ body.dark-mode .navigation {
 .projects > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
   list-style: none;
+  gap: 3rem;
 }
 
 .projects > ul > li > img {
@@ -414,13 +414,14 @@ body.dark-mode .see-source {
 
 .contact-form > div {
   width: 70vh;
+  margin-top: 5rem;
 }
 
 #form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   border: 1px solid gray;
   padding: 1.5rem;
 }
@@ -459,7 +460,7 @@ input[type="submit"] {
   border-radius: 5px;
   box-sizing: border-box;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   background-color: #007bff;
   color: #fff;
@@ -483,15 +484,25 @@ input[type="submit"]:focus {
     width: 70%;
   }
 
+  .about-me {
+    padding-top: 5rem;
+  }
+
+  .about-p {
+    font-size: 1.1rem;
+    width: 106%;
+  }
+
   .skills-list {
-    padding: 1rem;
+    padding: 0.4rem 1rem;
     box-shadow: 1px 1px 5px gray;
     margin: 1rem;
     margin-left: 0;
   }
 
-  .container > :first-child {
-    padding-top: 10rem;
+  .skills-list > h3 {
+    font-size: 0.8rem;
+    text-align: left;
   }
 
   .listings {
@@ -502,15 +513,22 @@ input[type="submit"]:focus {
     text-align: center;
     width: fit-content;
     white-space: nowrap;
+    font-size: 0.8rem;
   }
 
   .projects {
-    padding-left: 0;
+    width: 90%;
+    padding-left: 3rem;
+
+    /* border: 2px solid green; */
   }
 
   .projects > ul {
     place-items: center;
-    width: 100%;
+    width: 94%;
+    padding-left: 3rem;
+
+    /* border: 2px solid red; */
   }
 
   .projects > ul > li {
