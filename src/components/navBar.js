@@ -30,7 +30,7 @@ const Nav = () => {
         alt="menu--v1"
         onClick={toggleMenu}
       />
-      <div className={`nav-item ${menuOpen ? "open" : ""}`}>
+      <div className={`nav-item nav-picture ${menuOpen ? "open" : ""}`}>
         <picture>
           <img className="image" src={profileImage} alt="Profile" />
         </picture>
@@ -67,6 +67,7 @@ const Nav = () => {
         >
           04. Contact
         </Link>
+        {menuOpen && <DropdownMenu />}
       </div>
 
       <div className={`nav-item ${menuOpen ? "open" : ""}`}>

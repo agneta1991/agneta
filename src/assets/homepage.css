@@ -594,6 +594,8 @@ input[type="submit"]:focus {
     display: block;
     height: 1.5rem;
     width: auto;
+    z-index: 99;
+    position: fixed;
   }
 
   .open {
@@ -612,6 +614,12 @@ input[type="submit"]:focus {
     font-size: 1.5rem;
   }
 
+  .links {
+    border: 3px solid rgba(255, 255, 255, 0.241);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
   .nav-item.open {
     display: flex;
     flex-direction: column;
@@ -622,11 +630,46 @@ input[type="submit"]:focus {
     display: none;
   }
 
+  .nav-item.nav-picture.open {
+    display: none;
+    position: absolute;
+  }
+
   .socials-div {
     display: none;
   }
 
-  .dropdown {
+  .nav-item.open .dropdown {
     display: none;
+  }
+
+  .links-container.open .dropdown {
+    display: block;
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .dropdown-content {
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    width: 30vw;
+  }
+
+  .drop-btn {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.241);
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.269);
+    font-size: 1rem;
+  }
+
+  body.dark-mode .drop-btn {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  .drop-btn.menu {
+    width: 100%;
   }
 }
