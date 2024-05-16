@@ -1,30 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import profileImage from "../assets/images/profile.PNG";
 import DropdownMenu from "./buttonMode";
 
 const Nav = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  useState(() => {
+  useEffect(() => {
     const path = location.pathname;
     setActiveLink(path);
   }, [location]);
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <div className="navigation">
-      <div className="nav-item">
+      <img
+        className="burger-menu"
+        src="https://img.icons8.com/fluency/48/menu--v1.png"
+        alt="menu--v1"
+        onClick={toggleMenu}
+      />
+      <div className={`nav-item ${menuOpen ? "open" : ""}`}>
         <picture>
           <img className="image" src={profileImage} alt="Profile" />
         </picture>
       </div>
 
-      <div className="nav-item">
+      <div className={`nav-item links-container ${menuOpen ? "open" : ""}`}>
         <Link
           to="/"
           className={`home links ${activeLink === "/" ? "active" : ""}`}
@@ -57,7 +69,7 @@ const Nav = () => {
         </Link>
       </div>
 
-      <div className="nav-item">
+      <div className={`nav-item ${menuOpen ? "open" : ""}`}>
         <a
           href="https://docs.google.com/document/d/e/2PACX-1vSzFt08BxwINMamE2FCICZtXQwqpXGTa-GUgK2VpUkQZfWky_Gvx4OtmQuI9oNA2-aJ1SEIu6dsMJ0O/pub"
           target="_blank"
@@ -66,7 +78,6 @@ const Nav = () => {
         >
           Get My Resume
         </a>
-
         <DropdownMenu />
       </div>
     </div>
