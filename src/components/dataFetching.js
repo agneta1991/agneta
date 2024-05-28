@@ -10,7 +10,7 @@ import {
 
 const DataFetchingComponent = () => {
     const githubname = "agneta1991";
-  const accessToken = "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";
+  const accessToken = "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";
   const targetRepositories = [
     "book-an-appointment-capstone",
     "Budget-app-capstone",
