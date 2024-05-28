@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/agneta/static/css/main.0dcdc2a1.css",
+    "main.js": "/agneta/static/js/main.9e85d0d7.js",
+    "static/media/profile.PNG": "/agneta/static/media/profile.3deb4f0a095506d0cb22.PNG",
+    "static/media/heavy.jpg": "/agneta/static/media/heavy.b38240403aa109d7e721.jpg",
+    "static/media/space.jpg": "/agneta/static/media/space.73eeed3bafdebeaaf04d.jpg",
+    "static/media/budget.png": "/agneta/static/media/budget.e85f0e04690f79854985.png",
+    "static/media/health.jpg": "/agneta/static/media/health.f71bbfbd4264da919df8.jpg",
+    "static/media/weather.jpg": "/agneta/static/media/weather.5cf09c4da101a51dbae9.jpg",
+    "static/media/ruby.png": "/agneta/static/media/ruby.8288a2ba37d37b243f82.png",
+    "index.html": "/agneta/index.html",
+    "main.0dcdc2a1.css.map": "/agneta/static/css/main.0dcdc2a1.css.map",
+    "main.9e85d0d7.js.map": "/agneta/static/js/main.9e85d0d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dcdc2a1.css",
+    "static/js/main.9e85d0d7.js"
+  ]
+}
